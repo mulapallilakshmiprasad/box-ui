@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ContentExplorer } from 'box-ui-elements';
+import {IntlProvider} from 'react-intl';
 
 function App() {
   return (
     <div className="App">
+      <IntlProvider locale="en">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ContentExplorer
+        fileId={0}
+        token={'bZLtlgnUia4v39zXJUoxpU9zjyYJAjzz'}
+        />
       </header>
+      </IntlProvider>
     </div>
   );
 }
