@@ -7,12 +7,10 @@ function App() {
   return (
     <div className="App">
       <IntlProvider locale="en">
-      <header className="App-header">
         <ContentExplorer
         fileId={0}
-        token={'bZLtlgnUia4v39zXJUoxpU9zjyYJAjzz'}
+        token={'BGU0BKHGoTC5ldSGkYmGmJfRQBzpdMgy'}
         />
-      </header>
       </IntlProvider>
     </div>
   );
