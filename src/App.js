@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { ContentExplorer } from 'box-ui-elements';
+import { MDContentExplorer } from 'ps-react-mkd';
 import {IntlProvider} from 'react-intl';
 import {boxAppSettings, redirectUri} from './config.json';
 
@@ -15,7 +15,7 @@ class App extends React.Component {
     let code;
     if (redirected[1]) {
       code = redirected[1].split('=')[1];
-    } else if (!this.state.token) {
+    } else if (!this.state.token){
       window.location.assign(this.state.authenticateUrl);
     }
     if (code && !this.state.token) {
@@ -49,8 +49,8 @@ class App extends React.Component {
       return (
         <div className="App">
           <IntlProvider locale="en">
-          <ContentExplorer
-          accessToken={this.state.token}
+          <MDContentExplorer
+          token={this.state.token}
           />
           </IntlProvider>
         </div>)
