@@ -15,7 +15,7 @@
         "moment": "^2.27.0",
         "node-sass": "^4.14.1",
         "pikaday": "^1.8.0",
-        "ps-react-mkd": "^2.0.0",
+        "ps-react-mkd": "^1.1.0",
         "react": "^16.13.1",
         "react-animate-height": "^2.0.21",
         "react-beautiful-dnd": "^9.0.2",
