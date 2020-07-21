@@ -1,0 +1,7 @@
+{
+    "boxAppSettings": {
+        "clientID": "bxmp3gykxfr2oqdj1px6t0zji8aan5kn",
+        "clientSecret": "GUz2ubQKvTzb4Aw8fgve2qymysh02BSS"
+    },
+    "redirectUri": "http://localhost:3000"
+}
