@@ -15,7 +15,7 @@ class App extends React.Component {
     let code;
     if (redirected[1]) {
       code = redirected[1].split('=')[1];
-    } else {
+    } else if (!this.state.token) {
       window.location.assign(this.state.authenticateUrl);
     }
     if (code && !this.state.token) {
@@ -45,15 +45,19 @@ class App extends React.Component {
     }
   };
   render () {
-    return (
-      <div className="App">
-        <IntlProvider locale="en">
-        <ContentExplorer
-        fileId={0}
-        token={this.state.token}
-        />
-        </IntlProvider>
-      </div>)
+    if (this.state.token) {
+      return (
+        <div className="App">
+          <IntlProvider locale="en">
+          <ContentExplorer
+          accessToken={this.state.token}
+          />
+          </IntlProvider>
+        </div>)
+    } else {
+      return <h3> Connecting to Box UI...</h3>
+    }
+    
   }
 }
 
